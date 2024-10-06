@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Huynh Gia Huy - Personal Website</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="shortcut icon" href="images/icon.png">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="header2">
+            <div class="container">
+                <nav>
+                    <img src="images/icon.png" class="logo">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="cv.html">MyCV</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        
+        <div id="about">
+            <div class="about-container">
+                <div class="row">
+                    <div class="about1">
+                        <img src="images/aboutme.png">
+                    </div>
+                    <div class="about2">
+                        <h1 class="sub-title">About me</h1>
+                        <p>High flexibility and rapid learning capacity. My teamwork skills are solid, allowing me to work successfully with 
+others toward common goals. With a strong desire for self-improvement and an enthusiasm for learning, I am 
+dedicated to continually expanding my knowledge and abilities in a variety of fields.</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('education')"> Education</p>
+                            <p class="tab-links" onclick="opentab('skills')"> Skills</p>
+                        </div>
+                        
+                        <div class="tab-contents active-tab" id="education">
+                            <ul>
+                                <li><span>Gia Dinh High School - Ho Chi Minh City</span></li>
+                                <li>Fall 2018 – Summer 2021</li>
+                                <li>Majored in Informatic Technology</li>
+                                <li><span>International University(VNU - HCM)</span></li>
+                                <li>Fall 2021 – Summer 2025(expected)</li>
+                                <li>Undergraduate student majored in Computer Science</li>
+                                <li>GPA of 81.3, equivalent to 3.3/4 (2024)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tab-contents" id="skills">
+                            <ul>
+                                <li><span>Languages:</span> HTML, CSS, Java, Javascript</li>
+                                <li><span>Frameworks:</span> ReactJS, NodeJS</li>
+                                <li><span>Additional skills:</span> Problem solving, Technical writing, Presentation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+            
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
+        
+<!--        <footer>
+            <p>&copy; 2024 Huynh Gia Huy. All rights reserved.</p>
+        </footer>-->
+    </body>
+</html>
